@@ -45,3 +45,13 @@ module "rds_module" {
     
 }
 
+module "lb_module" {
+    source                 = "./LB"
+    vpc_id                 = module.vpc_module.vpc_id
+    public_subnet_id       = module.vpc_module.public_subnet_id
+    public_subnet_id2      = module.vpc_module.public_subnet_id2
+    lb_name                = var.lb.lb_name
+    lb_sg                  = var.lb.lb_sg
+    target_group_name      = var.lb.target_group_name
+}
+

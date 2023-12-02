@@ -47,3 +47,14 @@ variable "rds" {
     })
 }
 
+
+variable "lb" {
+type = object ({
+    lb_name           = string
+    lb_sg             = string
+    target_group_name = string
+    })
+}
+
+
+
