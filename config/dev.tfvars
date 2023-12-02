@@ -36,6 +36,11 @@
     password               = "wordpress123!"
     }
     
-    
+    lb = {
+    lb_name                = "wordpress-elb"
+    lb_sg                  = "wordpress-elb-sg"
+    target_group_name      = "wordpress-target-group"
+    }
+
    
     
